@@ -1,8 +1,18 @@
 @import "tailwindcss" source(none);
 @source "../src";
 @import "tw-animate-css";
+@import url("https://fonts.googleapis.com/css2?family=Caveat:wght@500;700&family=Fraunces:ital,wght@0,400;0,600;0,700;1,400&family=Inter:wght@400;500;600&display=swap");
 
 @custom-variant dark (&:is(.dark *));
+
+@theme {
+  --font-display: "Fraunces", serif;
+  --font-script: "Caveat", cursive;
+  --font-sans: "Inter", system-ui, sans-serif;
+  --color-cocoa: oklch(0.32 0.05 30);
+  --color-cream: oklch(0.97 0.02 70);
+  --color-rose: oklch(0.78 0.1 25);
+}
 
 /*
  * Design system definition.
@@ -62,21 +72,21 @@
 }
 
 :root {
-  --radius: 0.625rem;
-  --background: oklch(1 0 0);
-  --foreground: oklch(0.129 0.042 264.695);
-  --card: oklch(1 0 0);
-  --card-foreground: oklch(0.129 0.042 264.695);
-  --popover: oklch(1 0 0);
-  --popover-foreground: oklch(0.129 0.042 264.695);
-  --primary: oklch(0.208 0.042 265.755);
-  --primary-foreground: oklch(0.984 0.003 247.858);
-  --secondary: oklch(0.968 0.007 247.896);
-  --secondary-foreground: oklch(0.208 0.042 265.755);
-  --muted: oklch(0.968 0.007 247.896);
-  --muted-foreground: oklch(0.554 0.046 257.417);
-  --accent: oklch(0.968 0.007 247.896);
-  --accent-foreground: oklch(0.208 0.042 265.755);
+  --radius: 1rem;
+  --background: oklch(0.98 0.012 60);
+  --foreground: oklch(0.22 0.04 30);
+  --card: oklch(0.99 0.008 60);
+  --card-foreground: oklch(0.22 0.04 30);
+  --popover: oklch(0.99 0.008 60);
+  --popover-foreground: oklch(0.22 0.04 30);
+  --primary: oklch(0.38 0.08 30);
+  --primary-foreground: oklch(0.98 0.012 60);
+  --secondary: oklch(0.93 0.04 50);
+  --secondary-foreground: oklch(0.3 0.06 30);
+  --muted: oklch(0.94 0.02 60);
+  --muted-foreground: oklch(0.45 0.04 35);
+  --accent: oklch(0.72 0.13 40);
+  --accent-foreground: oklch(0.99 0.01 60);
   --destructive: oklch(0.577 0.245 27.325);
   --destructive-foreground: oklch(0.984 0.003 247.858);
   --border: oklch(0.929 0.013 255.508);
@@ -140,5 +150,11 @@
   body {
     background-color: var(--color-background);
     color: var(--color-foreground);
+    font-family: var(--font-sans);
   }
+  h1, h2, h3, h4 {
+    font-family: var(--font-display);
+    letter-spacing: -0.02em;
+  }
+  .font-script { font-family: var(--font-script); }
 }
