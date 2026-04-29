@@ -18,13 +18,13 @@ export const Route = createFileRoute("/services")({
 const services = [
   {
     name: "Natural Hair Twists",
-    price: "30,000 – 50,000 UGX",
+    price: "15,000 – 25,000 UGX",
     desc: "All sizes — perfect for protecting and showing off your natural texture.",
     img: cornrows,
   },
   {
     name: "Cornrows",
-    price: "15,000 – 25,000 UGX",
+    price: "30,000 – 50,000 UGX",
     desc: "Classic, neat cornrows tailored to your scalp pattern.",
     img: twists,
   },
